@@ -72,4 +72,4 @@ stage name: 'terraform', concurrency: 1
            }
    }
 }
-}
+
