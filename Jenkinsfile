@@ -3,7 +3,8 @@ stage('Scm Checkout'){
 git credentialsId: 'git', url: 'https://github.com/kishanpeddaboina/aws-terraform'
 
 }
-def tfHome = tool name: 'Terraform', type: 'com.cloudbees.jenkins.plugins.customtools.CustomTool'
+def tfHome = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
+
     env.PATH = "${tfHome}:${env.PATH}"
     wrap([$class: 'AnsiColorBuildWrapper', colorMapName: 'xterm']) {
  
